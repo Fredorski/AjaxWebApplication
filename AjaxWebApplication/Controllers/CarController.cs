@@ -20,5 +20,15 @@ namespace AjaxWebApplication.Controllers
             return PartialView(viewName: "_Create", model: car);
         }
         public void _HideCreate() {; }
+        public PartialViewResult _Create2(int id)
+        {
+            Car car = new Car { PersonId = id };
+            return PartialView(viewName: "_Create2", model: car);
+        }
+        [HttpPost]
+        public string _Create2(int id, Car model)
+        {
+            return "A car was sussesfully created:-)";
+        }
     }
 }
