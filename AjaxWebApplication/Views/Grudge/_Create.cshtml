@@ -1,6 +1,9 @@
 ﻿@model AjaxWebApplication.Models.Grudge
 
-@using (Html.BeginForm(actionName: "_Create", controllerName: "Grudge")) 
+@using (Ajax.BeginForm(
+    actionName: "_Create",
+    controllerName: "Grudge",
+    ajaxOptions: new AjaxOptions { UpdateTargetId= "SpandexGrudgeContainer" }))
 {
     @Html.AntiForgeryToken()
     
