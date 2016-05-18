@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AjaxWebApplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +13,16 @@ namespace AjaxWebApplication.Controllers
         public ActionResult Index()
         {
             return View();
-        } 
+        }
         public ActionResult Details()
         {
-
+            Person person = new Person()
+            {
+                ID = 2,
+                Name = "Freddie",
+                BirthDate = new DateTime(year: 1977, month: 01, day: 15)
+            };
+            return View(person);
         }
     }
 }
