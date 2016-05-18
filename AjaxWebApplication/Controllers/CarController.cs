@@ -19,5 +19,6 @@ namespace AjaxWebApplication.Controllers
             Car car = new Car { PersonId = id };
             return PartialView(viewName: "_Create", model: car);
         }
+        public void _HideCreate() {; }
     }
 }
