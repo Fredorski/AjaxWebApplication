@@ -24,5 +24,9 @@ namespace AjaxWebApplication.Controllers
             };
             return View(person);
         }
+        public string HitMe()
+        {
+            return "Pow!!! Punch!!! -";
+        }
     }
 }
